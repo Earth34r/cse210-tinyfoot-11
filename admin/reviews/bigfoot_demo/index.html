@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Example Bigfoot Page</title>
+    <link rel="stylesheet" href="../dist/bigfoot-default.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="../dist/bigfoot.min.js"></script>
+</head>
+<body>
+    <p>This is an example text with a footnote reference. See footnote <a href="#fn1" class="footnote">[1]</a>.</p>
+    <div class="footnotes">
+        <ol>
+            <li id="fn1">This is the footnote content.</li>
+        </ol>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $.bigfoot();
+        });
+    </script>
+</body>
+</html>
