@@ -39,10 +39,11 @@ In this module, the developer defined some constants to improve the code readabi
 #### INIT
 In this module, the developer include some key functions and helper functions to help init the bigfoot. For example, the key funtion -  footnoteInit function initializes the footnote buttons and their corresponding content when the document is ready, and the helper function - cleanFootnoteLinks function extracts and groups the ID and HERF of each footnote anchor, and it checks if there's a element associates the footnote links with it, which can help manage the note links more efficiently.
 #### ACTIVATE
-This module focuses on managing and displaying popover footnotes triggered by click or hover event. The code is designed to ensure popovers are well positioned and correctly displayed while avoid 
-aelrev
+This module focuses on managing and displaying popover footnotes triggered by click or hover event. The code is designed to ensure popovers are well positioned and correctly displayed while avoid overlap or multiple simultaneous popovers. For example, the key function buttonHover is triggered on hovering over a footnote button. It creates a popover for the hovered button while removing other popovers if the allowMultipleFN setting is disabled.
 #### INACTIVE
+This module is very similar to ACTIVE module which activates the popover, this module dissolve the poppover, which involves hover and click behaviors. The methods reviewed below handle the appearance and removal of these footnotes, with the focus on events like hovering, mouseout, and keypresses. For example, the key function unhoverFeet handles the behavior when the mouse leaves a footnote or button area. It checks if the deleteOnUnhover and activateOnHover settings are enabled, and if so, schedules the removal of the footnote after a delay.
 #### POSITION
+This module ensures that footnotes are positioned correctly based on the available space around the button and that they adapt responsively to window resizing. For example, the key function repositionFeet positions each footnote relative to its button depending on the available screen space. Handles positioning of the popover (footnote) above or below the button and also resizes it based on available screen real estate.
 #### BREAK
 #### OTHER
 This section defines an 'updateSetting' and 'getSetting' function, to modify the bigfoot settings.
