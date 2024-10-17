@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Example Bigfoot Page</title>
+    <link rel="stylesheet" href="../dist/bigfoot-default.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="../dist/bigfoot.min.js"></script>
+</head>
+<body>
+
+HEADEREND
+
+    <script>
+    $(document).ready(function() {
+        $.bigfoot();
+    });
+    </script>
+</body>
+</html>
