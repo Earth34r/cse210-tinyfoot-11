@@ -1,0 +1,119 @@
+:root {
+    /* Button variables */
+    --button-vertical-adjust: -0.1em; /* Placeholder value */
+    --button-per-side-padding: 0.5em; /* Placeholder value */
+    --button-right-margin: 0.1em; /* Placeholder value */
+    --button-left-margin: 0.2em; /* Placeholder value */
+    --button-border-radius: 0.3em; /* Placeholder value */
+    --button-color: 110, 110, 110; /* RGB values for the color */
+    --button-standard-opacity: 0.2;
+    --button-hovered-color: 110, 110, 110; /* RGB values for the hovered color */
+    --button-hovered-opacity: 0.5;
+    --button-activating-color: 110, 110, 110; /* RGB values for the activating color */
+    --button-activating-opacity: 0.5;
+    --button-active-color: 110, 110, 110; /* RGB values for the active color */
+    --button-active-opacity: 1;
+    --button-transition-properties: background-color;
+    --popover-transition-default-duration: 0.25s;
+    --button-active-style-delay: 0.1s;
+    
+    /* Circle variables */
+    --button-inner-circle-size: 0.25em;
+    --button-inner-circle-spacing: 0.25em;
+  }
+  
+  /* The button that activates the footnote. By default, this will appear as a
+     flat button that has an ellipse contained inside of it. */
+  /* @state .is-active            - The associated popover has been activated and is visible. */
+  .bigfoot-footnote__button {
+    /* POSITIONING */
+    position: relative;
+    z-index: 5;
+    top: var(--button-vertical-adjust);
+  
+    /* DISPLAY AND SIZING */
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    display: inline-block;
+    padding: var(--button-per-side-padding);
+    margin: 0 var(--button-right-margin) 0 var(--button-left-margin);
+  
+    /* BACKDROP */
+    border: none;
+    border-radius: var(--button-border-radius);
+    cursor: pointer;
+    background-color: rgba(var(--button-color), var(--button-standard-opacity));
+    backface-visibility: hidden;
+  
+    /* TEXT */
+    font-size: 1rem;
+    line-height: 0;
+    vertical-align: middle;
+    text-decoration: none;
+    -webkit-font-smoothing: antialiased;
+  
+    /* TRANSITIONS */
+    transition-property: var(--button-transition-properties);
+    transition-duration: var(--popover-transition-default-duration);
+  }
+  
+  .bigfoot-footnote__button:hover,
+  .bigfoot-footnote__button:focus {
+    outline: none;
+    background-color: rgba(var(--button-hovered-color), var(--button-hovered-opacity));
+  }
+  
+  .bigfoot-footnote__button:active {
+    background-color: rgba(var(--button-activating-color), var(--button-activating-opacity));
+  }
+  
+  .bigfoot-footnote__button.is-active {
+    background-color: rgba(var(--button-active-color), var(--button-active-opacity));
+    transition-delay: var(--button-active-style-delay);
+  }
+  
+  .bigfoot-footnote__button::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+  
+  /* Each of the three circles forming the ellipse within the button. */
+  .bigfoot-footnote__button__circle {
+    /* DISPLAY AND SIZING */
+    display: inline-block;
+    width: var(--button-inner-circle-size);
+    height: var(--button-inner-circle-size);
+    margin-right: var(--button-inner-circle-spacing);
+    vertical-align: middle;
+  }
+  
+  .bigfoot-footnote__button__circle:last-child {
+    margin-right: 0;
+  }
+  
+  /* New style to create a flex container for circles */
+  .bigfoot-footnote__button__circles {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+  
+
+  /* The container for the button and popover. This is required so that the popover
+     is guaranteed to have a relatively-positioned container, and to help with the
+     positioning calculation. */
+  .bigfoot-footnote__container {
+    display: inline-block;
+    position: relative;
+    text-indent: 0;
+  }
+  
+  /* Print styles would be included here */
+  @media print {
+    .bigfoot-footnote,
+    .bigfoot-footnote__button {
+      display: none !important;
+    }
+  }

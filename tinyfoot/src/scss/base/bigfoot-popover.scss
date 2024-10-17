@@ -168,9 +168,6 @@
 // above the tooltip and that can provide top and bottom indicators that there is
 // additional content on scrollable popovers.
 
-// @since 2.1.0
-// @author Chris Sauve
-
 .bigfoot-footnote__wrapper {
   // POSITIONING
   position: relative;
@@ -192,15 +189,9 @@
   line-height: 0;
 }
 
-
-
-//*
 // Contains the actual footnote content. There is very little prescription here
 // on the footnote content itself, except for removing and top margin on the first
 // element and bottom margin on the last child.
-
-// @since 2.1.0
-// @author Chris Sauve
 
 .bigfoot-footnote__content {
   // POSITIONING
