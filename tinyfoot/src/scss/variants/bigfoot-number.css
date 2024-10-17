@@ -1,0 +1,40 @@
+/* Converted from bigfoot-number.scss */
+
+.bigfoot-footnote__button {
+  position: relative;
+  height: var(--button-height); /* Replace with actual value */
+  width: 1.5em;
+  border-radius: calc(var(--button-height) / 2); /* Replace var(--button-height) with actual value */
+}
+
+.bigfoot-footnote__button:after {
+  /* CONTENT */
+  content: attr(data-footnote-number);
+
+  /* POSITION */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  /* DISPLAY AND SIZING */
+  display: block;
+
+  /* TEXT */
+  font-size: calc(var(--button-height) * 0.6); /* Replace var(--button-height) with actual value */
+  font-weight: bold;
+  color: rgba(var(--button-color), 0.5); /* Replace var(--button-color) with actual RGB values */
+
+  /* TRANSITIONS */
+  transition: color var(--popover-transition-default-duration) var(--popover-transition-default-timing-function);
+  /* Replace variables with actual values */
+}
+
+.bigfoot-footnote__button:hover:after,
+.bigfoot-footnote__button.is-active:after {
+  color: white;
+}
+
+.bigfoot-footnote__button__circle {
+  display: none;
+}
