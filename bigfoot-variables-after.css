@@ -1,0 +1,87 @@
+:root {
+    --color-primary: #007bff;
+    --color-secondary: #6c757d;
+    --color-success: #28a745;
+    --color-danger: #dc3545;
+    --color-warning: #ffc107;
+    --color-info: #17a2b8;
+    --color-light: #f8f9fa;
+    --color-dark: #343a40;
+    --font-family-base: "Helvetica Neue", Arial, sans-serif;
+    --font-size-base: 1rem;
+    --line-height-base: 1.5;
+    --spacer: 1rem;
+  }
+  
+  body {
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-base);
+    color: var(--color-dark);
+    background-color: var(--color-light);
+  }
+  
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--spacer);
+  }
+  
+  .button {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    font-size: var(--font-size-base);
+    font-weight: 700;
+    line-height: 1.5;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    background-color: var(--color-primary);
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  }
+  
+  .button:hover {
+    background-color: darken(var(--color-primary), 10%);
+  }
+  
+  .flex {
+    display: flex;
+  }
+  
+  .flex-column {
+    flex-direction: column;
+  }
+  
+  .flex-center {
+    justify-content: center;
+    align-items: center;
+  }
+  
+  @media (max-width: 768px) {
+    .container {
+      padding: calc(var(--spacer) / 2);
+    }
+    
+    .button {
+      font-size: calc(var(--font-size-base) * 0.875);
+    }
+  }
+  
+  @media not print {
+    .footnote-print-only {
+      display: none !important;
+    }
+  }
+  
+  @media print {
+    .bigfoot-footnote,
+    .bigfoot-footnote__button {
+      display: none !important;
+    }
+  }
+  
