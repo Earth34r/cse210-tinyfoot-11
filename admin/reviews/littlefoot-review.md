@@ -7,7 +7,7 @@
 
 #### Code Quality
 
-- Organization: The overall structure and code organization is high-quality. However, this repo has only basic level of directory structure, with core modules and DOM-related scripts. Additionally, it doesn't separate different modules in individual TypeScript files and all defined types in an independent script, which makes the maintainance and development difficult.
+- Organization: The overall structure and code organization is high-quality for a nodejs-based TypeScript project. However, this repo has only basic level of directory structure, with core modules and DOM-related scripts. Additionally, it doesn't separate different modules in individual TypeScript files and all defined types in an independent script, which makes the maintainance and development difficult. These scripts can be further modularized into smaller units for easy maintainance and developments.
 
 - Code comments: Despite the type, class, and function names are straightforward, **ZERO** code comments make it difficult for developers who are not familiar with this project to understand the functionality and  perform further developments on top of the code.
 
@@ -35,9 +35,9 @@
 
 #### Testing
 
-- Unit Tests: `test/`, the unit tests provided allow the developers to easily test the components and functions of LittleFoot by comparing their actual behavior with the expected behavior.
+- Unit Tests: the unit tests provided in `test/` allow the developers to easily test the components and functions of LittleFoot by comparing their actual behavior with the expected behavior.
 
-- End-to-End Tests: `cypress/e2e/`, the end-to-end tests provide another level of testing to ensure the correct overall workflow of LittleFoot by simulating real-world user scenarios.
+- End-to-End Tests: the end-to-end tests in `cypress/e2e/` provide another level of testing to ensure the correct overall workflow of LittleFoot by simulating real-world user scenarios.
 
 #### Development Tools: 
 
@@ -45,21 +45,22 @@
 
 #### Documentation
 
-- Project Documentation:  `README.md`
+- Project Documentation: `README.md` gives developers a clear view and instruction about how to install and use the scripts. 
 
 #### Packages
 
-- Package Management: `package.json`
+- Package Management: overall, `package.json` provides the necessary packages to run LittleFoot under nodejs environment and the scripts are easy to use and well documented. However, it is still worth to note that 1) the scripts only work on Linux or Unix-based machines and don't work on Windows machines, and 2) there is no script to create a simple demo for testing, which makes developers' testing process difficult. 
 
 
 ### Pattern and Language Use
 
-- TypeScript is a modern, actively maintained language that enhances JavaScript development.
+- TypeScript is a modern, actively maintained language that enhances JavaScript development. The strong typing of TypeScript guarantees the correct functionality and robustness for JavaScript. 
 
 
 ### Modules
 
 
 ### Tool Quality
+
 
 ### Final 
