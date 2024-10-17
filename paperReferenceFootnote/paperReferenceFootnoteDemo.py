@@ -39,13 +39,14 @@ class paperReferenceFootnote:
 
     def insertFootnote(self):
         # assert len(self.referPositions) == len(self.references), "Ref and Pos not match"
-        for i in range(len(self.referPositions)):
-            if len(self.referPositions[i]) == 0:
-                continue
-            curFootnote = self.references[i] # Need to change this pattern
-            for curPos in self.referPositions[i]:
-                self.orignalContent = self.orignalContent[:curPos] + curFootnote + self.orignalContent[curPos:]
-        return self.orignalContent
+        # for i in range(len(self.referPositions)):
+        #     if len(self.referPositions[i]) == 0:
+        #         continue
+        #     curFootnote = self.references[i] # Need to change this pattern
+            # for curPos in self.referPositions[i]:
+            #     self.orignalContent = self.orignalContent[:curPos] + curFootnote + self.orignalContent[curPos:]
+        # return self.orignalContent
+        pass
     
     def writeContentToFile(self, path):
         with open(path, 'w') as file:
