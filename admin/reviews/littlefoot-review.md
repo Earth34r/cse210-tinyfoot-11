@@ -63,7 +63,7 @@
 ### Tool Quality
 
 
-### Final Verdict
+## Final Verdict
 
 Overall, the LittleFoot repository demonstrates that its developer has abundant experience and expertise in handling Node.js-based TypeScript projects. LittleFoot provides well-defined settings functionality that makes customization simple. However, it is clear that the developer did not consider making it easy for other developers to maintain and build upon this project. The lack of comments and poor directory structure obviously prevent others from understanding its code.
 
