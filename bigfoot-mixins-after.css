@@ -1,0 +1,12 @@
+@media not print {
+    .footnote-print-only {
+      display: none !important;
+    }
+  }
+  
+  @media print {
+    .bigfoot-footnote,
+    .bigfoot-footnote__button {
+      display: none !important;
+    }
+  }
