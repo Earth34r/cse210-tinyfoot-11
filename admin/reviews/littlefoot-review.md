@@ -13,7 +13,7 @@
 
 #### Functionality and Organization
 
-- Entry Point: `src/littlefoot.ts`, defines the primary entry point of the application with input arguments on user settings, making it easy to import with developer's customization. 
+- Entry Point: `src/littlefoot.ts` defines the primary entry point of the application with input arguments on user settings, making it easy to import with developer's customization. 
   
 - Logics and Constants: `src/use-cases.ts` and `src/settings.ts` define types `UseCaseSettings`, `Footnote`, and `UseCases`. `UseCaseSettings` is a template for developers to manage footnotes. `Footnote` is the object with methods for activation, dismissal and `UseCases` is for methods for various footnote operations. `src/settings.ts` is for application-specific constants. Overall, this code exhibits high quality in terms of strong typing and providing a single source for the feature implementation and constants, making it easy for maintainability and customizations. 
 
@@ -49,7 +49,7 @@
 
 #### Packages
 
-- Package Management: overall, `package.json` provides the necessary packages to run LittleFoot under nodejs environment and the scripts are easy to use and well documented. However, it is still worth to note that 1) the scripts only work on Linux or Unix-based machines and don't work on Windows machines, and 2) there is no script to create a simple demo for testing, which makes developers' testing process difficult. 
+- Package Management: The `package.json` file includes the necessary packages to run LittleFoot in a Node.js environment, and the scripts are well-documented and easy to use. However, it’s important to note that: 1) the scripts only function on Linux or Unix-based systems and are incompatible with Windows, and 2) there is no script available to create a simple demo for testing, which complicates the developer testing process.
 
 
 ### Pattern and Language Use
