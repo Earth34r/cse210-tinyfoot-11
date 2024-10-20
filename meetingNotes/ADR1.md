@@ -1,74 +1,49 @@
 ---
 # These are optional metadata elements. Feel free to remove any of them.
-status: "{proposed | rejected | accepted | deprecated | … | superseded by ADR-0123"
-date: {YYYY-MM-DD when the decision was last updated}
-decision-makers: {list everyone involved in the decision}
-consulted: {list everyone whose opinions are sought (typically subject-matter experts); and with whom there is a two-way communication}
-informed: {list everyone who is kept up-to-date on progress; and with whom there is a one-way communication}
+status: "accepted"
+date: {2024-10-15}
+decision-makers: {Yuke Zhu, Delaware Wade, Shaobo Qu, Kanaad Deshpande}
 ---
 
-# {short title, representative of solved problem and found solution}
+# {ADR: Migration from Bigfoot to a JavaScript/TypeScript-based Solution}
 
 ## Context and Problem Statement
 
-{Describe the context and problem statement, e.g., in free form using two to three sentences or in the form of an illustrative story. You may want to articulate the problem in form of a question and add links to collaboration boards or issue management systems.}
+We are currently deciding between two legacy frameworks, Bigfoot and Littlefoot, for our project. Bigfoot is more widely adopted but suffers from outdated technologies and poor code organization. Littlefoot, while better organized and using a modern language (TypeScript), would require significant customization to meet our needs. The team needs to select a framework or solution that ensures long-term maintainability and a reasonable learning curve.
 
-<!-- This is an optional element. Feel free to remove. -->
+
 ## Decision Drivers
 
-* {decision driver 1, e.g., a force, facing concern, …}
-* {decision driver 2, e.g., a force, facing concern, …}
-* … <!-- numbers of drivers can vary -->
+Maintainability: The chosen solution should use modern, widely adopted languages and practices, ensuring future support and ease of use.
+Familiarity: The team has limited experience with older technologies like CoffeeScript, which could slow development.
+Code Quality: The solution should promote clean, modular code structures, reducing technical debt.
+Development Speed: A working version is needed quickly, but without sacrificing future scalability or maintainability.
 
 ## Considered Options
 
-* {title of option 1}
-* {title of option 2}
-* {title of option 3}
-* … <!-- numbers of options can vary -->
+* Option A: Redesign Bigfoot using JavaScript/TypeScript
+
+Pros:
+- Bigfoot has a wider adoption and more readable comments.
+- Less complicated overall architecture than Littlefoot.
+- Modernizing Bigfoot to JavaScript/TypeScript allows us to keep the structural simplicity while adopting modern practices.
+Cons:
+- Requires a full redesign from CoffeeScript/SCSS to JavaScript/TypeScript.
+- All code currently clustered in one file will need to be reorganized, which may require substantial refactoring.
+
+
+* Option B: Customize Littlefoot with TypeScript
+
+Pros:
+- Littlefoot already uses TypeScript, a modern language we are eager to learn.
+- Well-structured code organization out of the box, which aligns with our goal of maintainable code.
+- Sufficient documentation exists for TypeScript, easing the learning curve.
+Cons:
+- Less widely adopted and may require significant customization to meet our project’s needs.
+- Adopting Littlefoot may lead to slower development if customizations are extensive.
 
 ## Decision Outcome
 
-Chosen option: "{title of option 1}", because {justification. e.g., only option, which meets k.o. criterion decision driver | which resolves force {force} | … | comes out best (see below)}.
+>> Chosen Option: Option A - Redesign Bigfoot with JavaScript/TypeScript
 
-<!-- This is an optional element. Feel free to remove. -->
-### Consequences
-
-* Good, because {positive consequence, e.g., improvement of one or more desired qualities, …}
-* Bad, because {negative consequence, e.g., compromising one or more desired qualities, …}
-* … <!-- numbers of consequences can vary -->
-
-<!-- This is an optional element. Feel free to remove. -->
-### Confirmation
-
-{Describe how the implementation of/compliance with the ADR can/will be confirmed. Is the chosen design and its implementation in line with the decision? E.g., a design/code review or a test with a library such as ArchUnit can help validate this. Note that although we classify this element as optional, it is included in many ADRs.}
-
-<!-- This is an optional element. Feel free to remove. -->
-## Pros and Cons of the Options
-
-### {title of option 1}
-
-<!-- This is an optional element. Feel free to remove. -->
-{example | description | pointer to more information | …}
-
-* Good, because {argument a}
-* Good, because {argument b}
-<!-- use "neutral" if the given argument weights neither for good nor bad -->
-* Neutral, because {argument c}
-* Bad, because {argument d}
-* … <!-- numbers of pros and cons can vary -->
-
-### {title of other option}
-
-{example | description | pointer to more information | …}
-
-* Good, because {argument a}
-* Good, because {argument b}
-* Neutral, because {argument c}
-* Bad, because {argument d}
-* …
-
-<!-- This is an optional element. Feel free to remove. -->
-## More Information
-
-{You might want to provide additional evidence/confidence for the decision outcome here and/or document the team agreement on the decision and/or define when/how this decision the decision should be realized and if/when it should be re-visited. Links to other decisions and resources might appear here as well.}
+We decided to move forward with a complete redesign of Bigfoot using JavaScript/TypeScript. This decision was driven by the need to adopt modern technologies while maintaining Bigfoot’s simple architecture and wider adoption. The redesign will eliminate outdated CoffeeScript and SCSS code, improving maintainability, team familiarity, and code quality. Though the effort will be significant, this approach allows us to build a solution that is scalable and future-proof while aiming for a working version in the short term.
