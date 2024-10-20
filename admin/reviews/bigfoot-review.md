@@ -45,6 +45,7 @@ This module is very similar to ACTIVE module which activates the popover, this m
 #### POSITION
 This module ensures that footnotes are positioned correctly based on the available space around the button and that they adapt responsively to window resizing. For example, the key function repositionFeet positions each footnote relative to its button depending on the available screen space. Handles positioning of the popover (footnote) above or below the button and also resizes it based on available screen real estate.
 #### BREAK
+This section manages breakpoints.
 #### OTHER
 This section defines an 'updateSetting' and 'getSetting' function, to modify the bigfoot settings.
 #### BIND
@@ -63,5 +64,8 @@ The final module of the code, returning the created bigfoot variable.
 ## Demo
 We created a simple HTML page to show the effect of BigFoot.
 
+
 ## Final Verdict
 Due to the outdated tools used including CoffeeScript and Sass, there is no use in adapting or forking Bigfoot.js to create a new modern JavaScript footnote experience. Most of its functionality would have to be completely rewritten or discarded.
+
+Update: It turns out this was a shortsighted conclusion to make. Bigfoot's usefulness lies in its simplicity, so we've decided to adapt it using modern tools, replacing coffeescript and sass with pure JS and CSS.
