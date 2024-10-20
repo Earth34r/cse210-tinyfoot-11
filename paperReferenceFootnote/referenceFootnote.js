@@ -63,9 +63,9 @@ class PaperReferenceFootnote {
         writeStream.write(this.header + '\n');
         
         contentByLine.forEach(line => {
-            let footnoteMatches = [...line.matchAll(this.refPosPattern)];
+            let footnoteMatches = [...line.matchAll(this.refPosPattern)]; 
             footnoteMatches.forEach(match => {
-                const index = parseInt(match[0].slice(1, -1)); 
+                const index = parseInt(match[0].slice(1, -1));
                 line = line.replace(match[0], `<a href="#fn${index}" class="footnote">[${index}]</a>`);
 
                 writeStream.write('\t<div class="footnotes">\n');
