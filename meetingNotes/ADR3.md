@@ -30,35 +30,35 @@ We have already decided migrate Bigfoot for our project. To tackle with Bigfoot'
 
   #### Description:
 
-  This option includes using coffeescript website as a tool to translate CoffeeScript function to JavaScript function.
+  This option includes re-writing the CoffeeScript functions manually to JavaScript and then using the converting tool on CoffeeScript website to verify the CoffeeScript function to JavaScript function.
 
   #### Pros:
 
-  This is the most straightforward method for converting and suitable for team members without advanced JavaScript knowledge.
+  This is the most straightforward method for converting. The results can be tested and verified to make sure the correctness.
 
   #### Cons:
 
-  It will be time-consuming and laboring to convert them one-by-one. Errors may occur in the conversions.
+  This may require some extra tools and advanced knowledge in writing JavaScript codes. Team members are not experienced in programming with JavaScript. Errors may occur in the conversions.
   
-* Modularize the JavaScript files
+* Modularize the JavaScript files directly from CoffeeScript outputs 
 
   #### Description:
 
-  This option includes modularize the JavaScript files in to modules for easy usages. 
+  This option includes using generated JavaScripts files from the CoffeeScript functions, and manually replace and modularize to JavaScript functions. Then we can use the converting tool on CoffeeScript website to verify the CoffeeScript function to JavaScript function.
 
   #### Pros:
 
-  This option will give clear code structure for the project.
+  This is the most straightforward method for converting and suitable for team members without advanced JavaScript knowledge. The results can also be tested and verified to make sure the correctness.
 
   #### Cons:
 
-  This may require some extra tools and advanced knowledge in writing JavaScript codes. 
+  Errors may occur in the conversions since team members are not experienced with JavaScript.  
   
 * Convert SCSS to CSS
 
   #### Description:
 
-  This option includes using converting SCSS to CSS. 
+  This option includes using converting SCSS to CSS one by one. 
 
   #### Pros:
 
