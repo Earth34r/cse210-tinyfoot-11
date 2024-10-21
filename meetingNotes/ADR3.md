@@ -17,7 +17,7 @@ We have already decided migrate Bigfoot for our project. To tackle with Bigfoot'
 
 * Disorganized codes of BigFoot
 
-  After reading the code organizations of BigFoot, the team noticed that BigFoot is disorganized. Despite of the well-documented and well-commented codes of BigFoot, all the scripts, functions, and types are packed in the same `bigfoot.coffee` file, which make development hard.
+  After reading the code organizations of BigFoot, the team noticed that BigFoot is disorganized. Despite of the well-documented and well-commented codes of BigFoot, all the scripts, functions, and types are packed in the same `bigfoot.coffee` file, which makes further development hard.
 
 * Outdated and deprecated tools
 
@@ -27,8 +27,44 @@ We have already decided migrate Bigfoot for our project. To tackle with Bigfoot'
 ## Considered Options
 
 * Convert CoffeeScript function one-by-one to JavaScript function
-* Turn bigfoot.coffee into a skeleton
-* Mordularize the JavaScript files
+
+  #### Description:
+
+  This option includes using coffeescript website as a tool to translate CoffeeScript function to JavaScript function.
+
+  #### Pros:
+
+  This is the most straightforward method for converting and suitable for team members without advanced JavaScript knowledge.
+
+  #### Cons:
+
+  It will be time-consuming and laboring to convert them one-by-one. Errors may occur in the conversions.
+  
+* Modularize the JavaScript files
+
+  #### Description:
+
+  This option includes modularize the JavaScript files in to modules for easy usages. 
+
+  #### Pros:
+
+  This option will give clear code structure for the project.
+
+  #### Cons:
+
+  This may require some extra tools and advanced knowledge in writing JavaScript codes. 
+  
+* Convert SCSS to CSS
+
+  #### Description:
+
+  This option includes using converting SCSS to CSS. 
+
+  #### Pros:
+
+
+  #### Cons:
+
 
 ## Decision Outcome
 
