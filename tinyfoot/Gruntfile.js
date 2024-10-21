@@ -2,7 +2,7 @@
 (function() {
   module.exports = function(grunt) {
     var autoprefixSet, baseStyles, concatSet, sassSet, variants;
-    baseStyles = ['src/scss/foundation/bigfoot-variables-after.css', 'src/scss/foundation/bigfoot-mixins-after.css', 'src/scss/base/bigfoot-button.scss', 'src/scss/base/bigfoot-popover.scss'];
+    baseStyles = ['src/css/foundation/bigfoot-variables-after.css', 'src/css/foundation/bigfoot-mixins-after.css', 'src/css/base/bigfoot-button.css', 'src/css/base/bigfoot-popover.css'];
     variants = ['bottom', 'number'];
     concatSet = {
       options: {
@@ -12,27 +12,27 @@
       },
       main: {
         src: baseStyles,
-        dest: 'dist/bigfoot-default.scss'
+        dest: 'dist/bigfoot-default.css'
       }
     };
     sassSet = {
-      'dist/bigfoot-default.css': 'dist/bigfoot-default.scss'
+      'dist/bigfoot-default.css': 'dist/bigfoot-default.css'
     };
     autoprefixSet = {
       'dist/bigfoot-default.css': 'dist/bigfoot-default.css'
     };
     variants.forEach(function(variant) {
-      var conc, css, scss, src;
+      var conc, css, css, src;
       css = `dist/bigfoot-${variant}.css`;
-      scss = css.replace('.css', '.scss');
-      src = scss.replace('dist/', 'src/scss/variants/');
+      css = css.replace('.css', '.css');
+      src = css.replace('dist/', 'src/css/variants/');
       conc = baseStyles.slice(0);
       conc.push(src);
       concatSet[variant] = {
         src: conc,
-        dest: scss
+        dest: css
       };
-      sassSet[css] = scss;
+      sassSet[css] = css;
       return autoprefixSet[css] = css;
     });
     // 1. CONFIG
@@ -75,8 +75,8 @@
             spawn: false
           }
         },
-        scss: {
-          files: ['src/**/*.scss'],
+        css: {
+          files: ['src/**/*.css'],
           tasks: ['concat', 'sass', 'autoprefixer'],
           options: {
             spawn: false

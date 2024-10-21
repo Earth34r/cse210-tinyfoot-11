@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "grunt-cli": "^1.5.0"
+  },
+  "devDependencies": {
+    "grunt-contrib-coffee": "^2.1.0"
+  }
+}

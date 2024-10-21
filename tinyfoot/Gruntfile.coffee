@@ -1,9 +1,9 @@
 module.exports = (grunt) ->
   baseStyles = [
-    'src/scss/foundation/bigfoot-variables.scss'
-    'src/scss/foundation/bigfoot-mixins.scss'
-    'src/scss/base/bigfoot-button.scss'
-    'src/scss/base/bigfoot-popover.scss'
+    'src/css/foundation/bigfoot-variables.css'
+    'src/css/foundation/bigfoot-mixins.css'
+    'src/css/base/bigfoot-button.css'
+    'src/css/base/bigfoot-popover.css'
   ]
   variants = [
     'bottom'
@@ -18,22 +18,21 @@ module.exports = (grunt) ->
 
     main:
       src: baseStyles
-      dest: 'dist/bigfoot-default.scss'
+      dest: 'dist/bigfoot-default.css'
 
-  sassSet = 'dist/bigfoot-default.css': 'dist/bigfoot-default.scss'
+  sassSet = 'dist/bigfoot-default.css': 'dist/bigfoot-default.css'
   autoprefixSet = 'dist/bigfoot-default.css': 'dist/bigfoot-default.css'
 
   variants.forEach (variant) ->
     css = "dist/bigfoot-#{variant}.css"
-    scss = css.replace('.css', '.scss')
-    src = scss.replace('dist/', 'src/scss/variants/')
+    src = css.replace('dist/', 'src/css/variants/')
     conc = baseStyles.slice(0)
     conc.push src
     concatSet[variant] =
       src: conc
-      dest: scss
+      dest: css
 
-    sassSet[css] = scss
+    sassSet[css] = css
     autoprefixSet[css] = css
 
 
@@ -74,8 +73,8 @@ module.exports = (grunt) ->
         options:
           spawn: false
 
-      scss:
-        files: ['src/**/*.scss']
+      css:
+        files: ['src/**/*.css']
         tasks: [
           'concat'
           'sass'
