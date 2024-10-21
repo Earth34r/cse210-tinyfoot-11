@@ -35,29 +35,43 @@ We are currently deciding between two legacy frameworks, Bigfoot and Littlefoot,
 
 * Option A: Redesign Bigfoot using JavaScript/TypeScript
 
-Description: In this option, we would refactor Bigfoot by replacing its outdated CoffeeScript and SCSS with modern JavaScript  and CSS. This approach allows us to keep Bigfoot's core logic intact while improving maintainability by adopting more widely used technologies. The goal is to preserve the current functionality of Bigfoot while modernizing the codebase for better future support and scalability.
+#### Description: 
+In this option, we would refactor Bigfoot by replacing its outdated CoffeeScript and SCSS with modern JavaScript  and CSS. 
+Bigfoot is an existing codebase with a simpler architecture compared to Littlefoot and is more widely adopted in the development community. However, it currently uses outdated languages like CoffeeScript and SCSS, which pose challenges for maintainability and team productivity. The proposal here is to modernize Bigfoot by rewriting it in JavaScript/TypeScript while keeping its simpler structure intact.
 
-We would focus on breaking up the monolithic code structure, modularizing key components, and implementing best practices for code organization. This approach would also involve reworking styles to use modern CSS, which are better maintained.
 
-
-Pros:
+#### Pros:
 - Bigfoot has a wider adoption and more readable comments.
 - Less complicated overall architecture than Littlefoot.
 - Modernizing Bigfoot to JavaScript/TypeScript allows us to keep the structural simplicity while adopting modern practices.
-Cons:
+#### Cons:
 - Requires a full redesign from CoffeeScript/SCSS to JavaScript/TypeScript.
 - All code currently clustered in one file will need to be reorganized, which may require substantial refactoring.
+
+#### Examples/Considerations:
+
+Refactoring Bigfoot into modular components would require separating UI, business logic, and data-handling functionalities. For example, splitting CoffeeScript into TypeScript components will improve maintainability but requires careful planning to avoid regression issues.
+Prototype work has shown that simple modules like form validation are easy to convert, but more complex modules, such as state management, will need careful restructuring.
 
 
 * Option B: Customize Littlefoot with TypeScript
 
-Pros:
+#### Description: 
+Littlefoot already uses TypeScript, a language that aligns with the team's goals for learning and adopting modern tools. Its well-structured code organization is appealing for maintainability and scalability. 
+However, Littlefoot is not as widely adopted as Bigfoot and may require more customization to fit the specific needs of the project.
+
+#### Pros:
 - Littlefoot already uses TypeScript, a modern language we are eager to learn.
 - Well-structured code organization out of the box, which aligns with our goal of maintainable code.
 - Sufficient documentation exists for TypeScript, easing the learning curve.
-Cons:
+#### Cons:
 - Less widely adopted and may require significant customization to meet our project’s needs.
 - Adopting Littlefoot may lead to slower development if customizations are extensive.
+
+#### Examples/Considerations:
+
+For instance, Littlefoot might not have built-in support for specific UI frameworks or state management tools we need, requiring us to integrate those manually.
+Prototyping with Littlefoot has shown that its modular design makes customizations easier to implement, but the lack of certain integrations could introduce development overhead.
 
 ## Decision Outcome
 
