@@ -1,13 +1,11 @@
 ---
 # These are optional metadata elements. Feel free to remove any of them.
-status: "{proposed | rejected | accepted | deprecated | … | superseded by ADR-0123"
-date: {YYYY-MM-DD when the decision was last updated}
-decision-makers: {list everyone involved in the decision}
-consulted: {list everyone whose opinions are sought (typically subject-matter experts); and with whom there is a two-way communication}
-informed: {list everyone who is kept up-to-date on progress; and with whom there is a one-way communication}
+status: "accepted"
+date: {2024-10-18}
+decision-makers: {Yuke Zhu, Delaware Wade, Shaobo Qu, Kanaad Deshpande}
 ---
 
-# ADR: Modularize the CoffeeScript to Replace Functions with Raw Javascript in LittleFoot
+# ADR: Modularize the CoffeeScript to Replace Functions with Raw Javascript and Convert SCSS to CSS in LittleFoot
 
 ## Context and Problem Statement
 
@@ -17,11 +15,11 @@ We have already decided migrate Bigfoot for our project. To tackle with Bigfoot'
 
 * Disorganized codes of BigFoot
 
-  After reading the code organizations of BigFoot, the team noticed that BigFoot is disorganized. Despite of the well-documented and well-commented codes of BigFoot, all the scripts, functions, and types are packed in the same `bigfoot.coffee` file, which makes further development hard.
+  After reviewing the code structure of BigFoot, the team noticed it is disorganized. Despite being well-documented and thoroughly commented, all scripts, functions, and types are bundled into a single `bigfoot.coffee` file, making future development difficult.
 
 * Outdated and deprecated tools
 
-  Some of the team members struggled to run BigFoot on their devices, which reflected that CoffeeScript and SCSS are deprecated and outdated tools for web development. A renovating and updating processing should be performed to make it functional and catch up with the latest web frameworks.
+ Some team members encountered difficulties running BigFoot on their devices, highlighting that CoffeeScript and SCSS are deprecated and outdated tools for web development. To ensure functionality and stay current with the latest web frameworks, a renovation and update process should be implemented.
 
 * Team members are not experienced with web development
 
