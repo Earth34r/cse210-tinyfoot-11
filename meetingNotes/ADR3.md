@@ -17,11 +17,11 @@ informed: {list everyone who is kept up-to-date on progress; and with whom there
 
 * Disorganized codes of BigFoot
 
-Despite of the well-documented and well-commented codes of BigFoot, all the scripts, functions, and types are packed in the same `bigfoot.coffee` file, which make development hard.
+  Despite of the well-documented and well-commented codes of BigFoot, all the scripts, functions, and types are packed in the same `bigfoot.coffee` file, which make development hard.
 
 * Outdated and deprecated tools
 
-CoffeeScript and SCSS are deprecated and outdated tools for web development. A renovating and updating processing should be performed to make it functional and catch up with the latest web frameoworks.
+  CoffeeScript and SCSS are deprecated and outdated tools for web development. A renovating and updating processing should be performed to make it functional and catch up with the latest web frameoworks.
 
 
 ## Considered Options
