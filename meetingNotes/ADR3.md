@@ -7,18 +7,22 @@ consulted: {list everyone whose opinions are sought (typically subject-matter ex
 informed: {list everyone who is kept up-to-date on progress; and with whom there is a one-way communication}
 ---
 
-# {short title, representative of solved problem and found solution}
+# ADR: Progress on Migrating from Bigfoot to a JavaScript/TypeScript-based Solution for TinyFoot
 
 ## Context and Problem Statement
 
-{Describe the context and problem statement, e.g., in free form using two to three sentences or in the form of an illustrative story. You may want to articulate the problem in form of a question and add links to collaboration boards or issue management systems.}
+{We have already decided migrate Bigfoot for our project. To tackle with Bigfoot's outdated tools and codes, like CoffeeScript and SCSS, we proposed to migrate it to JavaScript and CSS. In this meeting, the team is discussing the progress and deciding the next step of migration. }
 
-<!-- This is an optional element. Feel free to remove. -->
 ## Decision Drivers
 
-* {decision driver 1, e.g., a force, facing concern, …}
-* {decision driver 2, e.g., a force, facing concern, …}
-* … <!-- numbers of drivers can vary -->
+* Disorganized codes of BigFoot
+
+Despite of the well-documented and well-commented codes of BigFoot, all the scripts, functions, and types are packed in the same `bigfoot.coffee` file, which make development hard.
+
+* Outdated and deprecated tools
+
+CoffeeScript and SCSS are deprecated and outdated tools for web development. A renovating and updating processing should be performed to make it functional and catch up with the latest web frameoworks.
+
 
 ## Considered Options
 
