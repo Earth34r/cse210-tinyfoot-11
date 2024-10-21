@@ -26,6 +26,9 @@ The parser should be easy to update and extend to accommodate different citation
 
 * Option A: Build a Custom Parser from Scratch
 
+#### Description:
+This option involves creating a parser entirely from the ground up to handle references in papers and transform them into footnotes. The custom parser would be designed specifically for our project and the Bigfoot system, ensuring full control over how it operates and how the output is formatted. While this approach gives us maximum flexibility and customization potential, it will require a substantial time commitment to implement, test, and refine.
+
 #### Pros:
 
 Full control over how the parser operates, allowing it to be tailored specifically to our project needs.
@@ -40,6 +43,9 @@ Building parsing logic that handles a wide range of citation styles may introduc
 
 
 * Option B: Use an Existing Parsing Library
+
+#### Description:
+This option leverages existing parsing libraries that can identify references and footnotes in various formats. By using a pre-built solution, we save time and effort on development, as these libraries have likely been tested in multiple scenarios and may already handle a wide range of citation styles.
 
 #### Pros:
 
@@ -57,9 +63,8 @@ Existing libraries may be too generic, leading to inefficiencies or inaccuracies
 - Citation Styles: The parser will initially handle IEEE-style citations (e.g., “[1]”), but should be extensible for other formats like APA or MLA. Handling multiple styles will involve adding new parsing rules as needed.
 
 - Error Handling: The parser must detect and handle inconsistencies, such as missing references or mismatched in-text citations, providing clear logs for debugging.
-sizes.
 
-- Output Format: The parser will generate an HTML file with footnotes properly formatted for Bigfoot to recognize, using <footer> or <sup> tags for citations.
+- Output Format: The parser will generate an HTML file with footnotes properly formatted for Bigfoot to recognize, using <footer> tags for citations.
 
 
 ## Decision Outcome
