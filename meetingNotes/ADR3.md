@@ -7,29 +7,28 @@ consulted: {list everyone whose opinions are sought (typically subject-matter ex
 informed: {list everyone who is kept up-to-date on progress; and with whom there is a one-way communication}
 ---
 
-# ADR: Progress on Migrating from Bigfoot to a JavaScript/TypeScript-based Solution for TinyFoot
+# ADR: Modularize the CoffeeScript to Replace Functions with Raw Javascript in LittleFoot
 
 ## Context and Problem Statement
 
-{We have already decided migrate Bigfoot for our project. To tackle with Bigfoot's outdated tools and codes, like CoffeeScript and SCSS, we proposed to migrate it to JavaScript and CSS. In this meeting, the team is discussing the progress and deciding the next step of migration. }
+We have already decided migrate Bigfoot for our project. To tackle with Bigfoot's outdated tools and codes, like CoffeeScript and SCSS, we proposed to migrate it to JavaScript and CSS. In this meeting, the team is discussing the progress and deciding the next step of migration. 
 
 ## Decision Drivers
 
 * Disorganized codes of BigFoot
 
-  Despite of the well-documented and well-commented codes of BigFoot, all the scripts, functions, and types are packed in the same `bigfoot.coffee` file, which make development hard.
+  After reading the code organizations of BigFoot, the team noticed that BigFoot is disorganized. Despite of the well-documented and well-commented codes of BigFoot, all the scripts, functions, and types are packed in the same `bigfoot.coffee` file, which make development hard.
 
 * Outdated and deprecated tools
 
-  CoffeeScript and SCSS are deprecated and outdated tools for web development. A renovating and updating processing should be performed to make it functional and catch up with the latest web frameoworks.
+  Some of the team members struggled to run BigFoot on their devices, which reflected that CoffeeScript and SCSS are deprecated and outdated tools for web development. A renovating and updating processing should be performed to make it functional and catch up with the latest web frameworks.
 
 
 ## Considered Options
 
-* {title of option 1}
-* {title of option 2}
-* {title of option 3}
-* … <!-- numbers of options can vary -->
+* Convert CoffeeScript function one-by-one to JavaScript function
+* Turn bigfoot.coffee into a skeleton
+* Mordularize the JavaScript files
 
 ## Decision Outcome
 
